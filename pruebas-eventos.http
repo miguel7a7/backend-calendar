@@ -1,0 +1,47 @@
+// Recuperacion de todos los eventos
+GET http://localhost:4001/api/eventos HTTP/1.1
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmY1NmE5ODVjNjdkMGExNzBlOTk1NzMiLCJub21icmVzIjoiU29uaWEgTWFyaWx5biIsImlhdCI6MTY2MDI1MDkwMSwiZXhwIjoxNjYwMjU4MTAxfQ.1lkruH1IIP1_YKjhg1Y1QXXSvponBPw8tJeW1lSWO8k
+
+// Creacion de Evento
+###
+POST http://localhost:4001/api/eventos HTTP/1.1
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmY1NmE5ODVjNjdkMGExNzBlOTk1NzMiLCJub21icmVzIjoiU29uaWEgTWFyaWx5biIsImlhdCI6MTY2MDI1MDkwMSwiZXhwIjoxNjYwMjU4MTAxfQ.1lkruH1IIP1_YKjhg1Y1QXXSvponBPw8tJeW1lSWO8k
+Content-Type: application/json
+
+{
+  "title": "pagar la luz otra vez vez",
+  "start": 1000000,
+  "end": 100000000,
+  "notes": "factura pendiente"
+}
+
+
+// Actualizacion de EVENTO
+###
+PUT  http://localhost:4001/api/eventos/62f56c735c67d0a170e99580 HTTP/1.1
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmY1NmE5ODVjNjdkMGExNzBlOTk1NzMiLCJub21icmVzIjoiU29uaWEgTWFyaWx5biIsImlhdCI6MTY2MDI1MDkwMSwiZXhwIjoxNjYwMjU4MTAxfQ.1lkruH1IIP1_YKjhg1Y1QXXSvponBPw8tJeW1lSWO8k
+Content-Type: application/json
+
+{
+  "title": "HOLA desde Sonia",
+  "start": 1000000,
+  "end": 100000000,
+  "notes": "Hola mundo...."
+}
+
+###
+// Verificaion de usuario que no registro el evento
+PUT  http://localhost:4001/api/eventos/62f56c735c67d0a170e99580 HTTP/1.1
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmY1NmFiZDVjNjdkMGExNzBlOTk1NzciLCJub21icmVzIjoiTWlndWVsIEFuZ2VsIiwiaWF0IjoxNjYwMjUxNzQxLCJleHAiOjE2NjAyNTg5NDF9.KFoFTj1IkQRZ2fxsk6cx6U0kw3ICWIi2-NdDo3MGPAE
+Content-Type: application/json
+
+{
+  "title": "hola desde Maick otra vez",
+  "start": 1000000,
+  "end": 100000000,
+  "notes": "Hola mundo...."
+}
+
+###
+DELETE  http://localhost:4001/api/eventos/62f57409b5ff0cea8d1984c6 HTTP/1.1
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmY1NmFiZDVjNjdkMGExNzBlOTk1NzciLCJub21icmVzIjoiTWlndWVsIEFuZ2VsIiwiaWF0IjoxNjYwMjUxNzQxLCJleHAiOjE2NjAyNTg5NDF9.KFoFTj1IkQRZ2fxsk6cx6U0kw3ICWIi2-NdDo3MGPAE

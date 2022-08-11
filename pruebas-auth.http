@@ -1,0 +1,41 @@
+// Crear Usuario o Registrar usuario
+POST http://localhost:4001/api/auth/new HTTP/1.1
+Content-Type: application/json
+
+# {
+#   "nombres":"Sonia Marilyn",
+#   "apellidos":"Poma Quispe",
+#   "cedula":"6048258",
+#   "email":"seniapoma@gmail.com",
+#   "telefono":"69776354",
+#   "password":"1234567"
+# }
+
+{
+  "nombres":"Miguel Angel",
+  "apellidos":"Cayo Mamani",
+  "cedula":"4852322",
+  "email":"webmmaick1@gmail.com",
+  "telefono":"69776354",
+  "password":"123456"
+}
+
+
+
+// Autenticar usuario
+###
+POST http://localhost:4001/api/auth HTTP/1.1
+Content-Type: application/json
+
+{
+  "email":"webmmaick1@gmail.com",
+  "password":"123456"
+}
+
+// Actualizar token de caducidad
+###
+// Enviando token por header 
+GET http://localhost:4001/api/auth/renew HTTP/1.1
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmY0NmI1Nzg2NGFkNjlkZGI2YWNkMWEiLCJub21icmVzIjoiU29uaWEgTWFyaWx5biIsImlhdCI6MTY2MDI0NDQxNywiZXhwIjoxNjYwMjUxNjE3fQ.lqHx-QgRABgv5_97phOWJfzUM3PjhbU8XKwsJsBWFx4
+###
+
